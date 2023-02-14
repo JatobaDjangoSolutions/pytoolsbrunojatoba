@@ -7,3 +7,4 @@ Link of the course [DevPro](https://plataforma.dev.pro.br/)
 Checklist topics of the course:
 1. Git
 2. VirtualEnv
+3. Pip
