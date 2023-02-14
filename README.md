@@ -4,4 +4,7 @@ In this course is taught how contributed in open source projects
 
 Link of the course [DevPro](https://plataforma.dev.pro.br/)
 
-1. Pip
+Checklist topics of the course:
+1. Git
+2. VirtualEnv
+3. Pip
