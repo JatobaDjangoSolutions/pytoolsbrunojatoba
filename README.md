@@ -8,3 +8,4 @@ Checklist topics of the course:
 1. Git
 2. VirtualEnv
 3. Pip
+4. New option
