@@ -6,6 +6,10 @@ Link of the course [DevPro](https://plataforma.dev.pro.br/)
 
 This project has support for Python 3 version
 
+[![Updates](https://pyup.io/repos/github/brjatoba92/pytoolsbrunojatoba/shield.svg)](https://pyup.io/repos/github/brjatoba92/pytoolsbrunojatoba/)
+
+[![Python 3](https://pyup.io/repos/github/brjatoba92/pytoolsbrunojatoba/python-3-shield.svg)](https://pyup.io/repos/github/brjatoba92/pytoolsbrunojatoba/)
+
 Checklist topics of the course and commands necessary for job:
 
 1. Git:
