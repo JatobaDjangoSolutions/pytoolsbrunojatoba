@@ -128,7 +128,8 @@ pip install requests
 
 Flake8 (requirements-dev.txt):
 
-Check errors in the code (various or without spaces)
+Check errors in the code(various or without spaces)
+
 ```console
 pip install flake8
 flake8
@@ -142,3 +143,11 @@ Generate the file txt with libs to be made available in github repository
 pip freeze > requirements.txt
 pip freeze > requirements-dev.txt (flake8, delete requirements libs )
 ```
+
+Install .venv libs of the requirements-dev.txt file
+```console
+pip install -r requirements-dev.txt
+```
+
+5. Pypi:
+Setup.py file
