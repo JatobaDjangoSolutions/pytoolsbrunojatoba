@@ -145,9 +145,44 @@ pip freeze > requirements-dev.txt (flake8, delete requirements libs )
 ```
 
 Install .venv libs of the requirements-dev.txt file
+
 ```console
 pip install -r requirements-dev.txt
 ```
 
+5. GitHub Actions
+I'm using in place of the Travis CI
+Create .github_actions.yml file in the .github/workflows folder
+```console
+name: Python application
+
+on: [pull_request]
+
+jobs:
+  build:
+    env:
+      PIPENV_NO_INHERIT: 1
+      PIPENV_IGNORE_VIRTUALENVS: 1
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.11.2
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.11.2
+
+      - name: Install dependencies
+        run: |
+          pip install -q -r requirements-dev.txt
+      - name: Lint with flake8.
+        run: |
+          pipenv run flake8 .
+```
+
 5. Pypi:
 Setup.py file
+Create a new .venv out of the repository
+```console
+pip install -e ./pytoolsbrunojatoba/
+```
