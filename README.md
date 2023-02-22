@@ -220,6 +220,13 @@ pip install -e ./pytoolsbrunojatoba/
 ```
 
 Upload to Pypi
+
+Create a new tag and push to upstream
+```console
+git tag 0.1
+git push --tags
+```
+
 ```console
 pip install twine
 python setup.py sdist (generate the dist folder)
