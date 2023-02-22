@@ -181,8 +181,51 @@ jobs:
 ```
 
 5. Pypi:
+
 Setup.py file
+```console
+PACKAGE = "pytoolsbrunojatoba"
+NAME = "pytoolsbrunojatoba"
+DESCRIPTION = "Módulo para exemplificar construção de projetos Python no curso PyTools"
+AUTHOR = "Bruno Jatobá"
+AUTHOR_EMAIL = "brjatoba92@djangosolutions.com"
+URL = "https://github.com/brjatoba92/pytoolsbrunojatoba"
+```
+
+```console
+long_description=read('README.md'),
+long_description_content_type='text/markdown',
+license=read('LICENSE'),
+```
+
+```console
+classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        #"Programming Language :: Python :: 3.11.2",
+        "Framework :: Pytest",
+```
+
+```console
+install_requires=[
+        'requests'
+```
 Create a new .venv out of the repository
 ```console
 pip install -e ./pytoolsbrunojatoba/
+```
+
+Upload to Pypi
+```console
+pip install twine
+python setup.py sdist (generate the dist folder)
+twine upload dist/* (set the username and password)
+```
+- Rename in setup.py the option,before was the specified python version of venv(3.11.2)
+```console
+Classifier 'Programming Language :: Python
 ```

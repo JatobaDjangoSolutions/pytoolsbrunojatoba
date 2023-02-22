@@ -95,7 +95,7 @@ def find_package_data(
 
 
 PACKAGE = "pytoolsbrunojatoba"
-NAME = PACKAGE
+NAME = "pytoolsbrunojatoba"
 DESCRIPTION = "Módulo para exemplificar construção de projetos Python no curso PyTools"
 AUTHOR = "Bruno Jatobá"
 AUTHOR_EMAIL = "brjatoba92@djangosolutions.com"
@@ -121,7 +121,7 @@ setup(
         "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.11.2",
+        #"Programming Language :: Python :: 3.11.2",
         "Framework :: Pytest",
     ],
     install_requires=[
