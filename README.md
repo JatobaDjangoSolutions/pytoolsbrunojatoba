@@ -236,3 +236,21 @@ twine upload dist/* (set the username and password)
 ```console
 Classifier 'Programming Language :: Python
 ```
+
+6. Pytest
+
+Install pytest lib with venv activate
+```console
+pip install pytest
+```
+
+Manual add the new transitives libs generate with pytest install in requiments-dev.txt file
+
+Create tests folder with test_exemple.py file
+
+Execute pytest command
+```console
+pytest pytoolsbrunojatoba 
+or 
+pytest pytoolsbrunojatoba/tests (more specific)
+```
