@@ -254,3 +254,25 @@ pytest pytoolsbrunojatoba
 or 
 pytest pytoolsbrunojatoba/tests (more specific)
 ```
+
+7. Pytest Coverage
+
+Install pytest-cov:
+
+```console
+pip install pytest-cov
+```
+
+
+Edit the requirements-dev.txt and add new libs generated:
+
+```console
+coverage==7.1.0
+pytest-cov==4.0.0
+```
+
+Execute the command
+
+```console
+pytest pytoolsbrunojatoba --cov=pytoolsbrunojatoba
+```

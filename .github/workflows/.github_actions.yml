@@ -18,10 +18,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -q -r requirements-dev.txt
+          pip install -q -r requirements-dev.txt codecov
       - name: Lint with flake8.
         run: |
           flake8
       - name: Test with pytest
         run: |
-          pytest pytoolsbrunojatoba
+          pytest pytoolsbrunojatoba --cov=pytoolsbrunojatoba
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
