@@ -1,16 +1,19 @@
 from pytoolsbrunojatoba.spam.enviador_de_email import Enviador
+import pytest
 
 def test_criar_enviador_de_email():
     enviador=Enviador()
     assert enviador is not None
 
-def test_remetente():
+@pytest.mark.parametrize('destinatario', ['bellaragao@gmail.com', 'revphilippe@outlook.com']
+)
+
+def test_remetente(destinatario):
     enviador=Enviador()
-    resultado = enviador.enviar(
-        'brjatoba@djangosolutions.com', 
-        'bellaragao@gmail.com', 
+    resultado = enviador.enviar( 
+        destinatario,
+        'brjatoba@djangosolutions.com',
         'DevPro Alert',
         'The DevPro Course is with subscribed open. Enjoy now !!!'
         )
-    
-    assert 'brjatoba@djangosolutions.com' in resultado
+    assert destinatario in resultado
