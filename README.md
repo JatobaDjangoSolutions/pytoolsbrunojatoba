@@ -276,15 +276,3 @@ Execute the command
 ```console
 pytest pytoolsbrunojatoba --cov=pytoolsbrunojatoba
 ```
-
-GitHub Actions
-```console
-- name: Test with pytest
-        run: |
-          pytest pytoolsbrunojatoba --cov=pytoolsbrunojatoba
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-      - name: Codecov Report
-        run: |
-          codecov
-```
