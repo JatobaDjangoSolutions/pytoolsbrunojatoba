@@ -14,19 +14,19 @@ jobs:
       - name: Set up Python 3.11.2
         uses: actions/setup-python@v1
         with:
-          python-version: 3.11.2
+          python-version: 3.11
 
       - name: Install dependencies
         run: |
           pip install -q -r requirements-dev.txt codecov
       - name: Lint with flake8.
         run: |
-          flake8
+          pipenv run flake8 .
       - name: Test with pytest
         run: |
-          pytest pytoolsbrunojatoba --cov=pytoolsbrunojatoba
+          pipenv run pytest pytoolsbrunojatoba --cov=pytoolsbrunojatoba
       - name: Reports Coverage
         env: 
           CODECOV_TOKEN=29b051af-9135-4008-b347-6fd8bc80f3f5
         run: |
-          codecov
+          pipenv run codecov
