@@ -3,7 +3,7 @@ from pytoolsbrunojatoba.spam.modelos import Usuario
 import pytest
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def conexao():
     conexao_obj = Conexao()
     yield conexao_obj
