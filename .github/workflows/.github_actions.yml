@@ -24,9 +24,9 @@ jobs:
           pipenv run flake8 .
       - name: Test with pytest
         run: |
-          pipenv run pytest pytoolsbrunojatoba --cov=pytoolsbrunojatoba
+          pytest pytoolsbrunojatoba --cov=pytoolsbrunojatoba
       - name: Reports Coverage
         env: 
           CODECOV_TOKEN=29b051af-9135-4008-b347-6fd8bc80f3f5
         run: |
-          pipenv run codecov
+          codecov

@@ -11,14 +11,15 @@ class Sessao:
         return self.usuarios
     
     def roll_back(self):
-        self.usuarios.clear() #apaga qualquer influencia de outro teste faz com o que haja isolamento de teste
+        self.usuarios.clear()
 
     def fechar(self):
         pass
+
 
 class Conexao:
     def gerar_sessao(self):
         return Sessao()
+    
     def fechar(self):
         pass
-    
