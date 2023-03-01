@@ -16,8 +16,6 @@ from unittest.mock import Mock
             ]
         ]
 )
-
-
 def test_qtd_de_spam(sessao, usuarios):
     for usuario in usuarios:
         sessao.salvar(usuario)

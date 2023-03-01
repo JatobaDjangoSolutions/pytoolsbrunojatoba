@@ -24,7 +24,7 @@ def test_remetente(destinatario):
 def test_remetente_invalido(destinatario):
     enviador = Enviador()
     with pytest.raises(EmailInvalido):
-        resultado = enviador.enviar(
+        enviador.enviar(
             destinatario,
             'brjatoba@djangosolutions.com',
             'DevPro Alert',
