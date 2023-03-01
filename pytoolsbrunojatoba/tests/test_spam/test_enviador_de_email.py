@@ -11,7 +11,7 @@ def test_criar_enviador_de_email():
 @pytest.mark.parametrize('destinatario', ['bellaragao@gmail.com', 'revphilippe@outlook.com'])
 def test_remetente(destinatario):
     enviador = Enviador()
-    resultado = enviador.enviar( 
+    resultado = enviador.enviar(
         destinatario,
         'brjatoba@djangosolutions.com',
         'DevPro Alert',
@@ -24,7 +24,7 @@ def test_remetente(destinatario):
 def test_remetente_invalido(destinatario):
     enviador = Enviador()
     with pytest.raises(EmailInvalido):
-        resultado = enviador.enviar( 
+        resultado = enviador.enviar(
             destinatario,
             'brjatoba@djangosolutions.com',
             'DevPro Alert',

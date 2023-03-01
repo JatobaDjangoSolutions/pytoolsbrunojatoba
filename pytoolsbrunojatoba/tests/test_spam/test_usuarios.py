@@ -9,7 +9,7 @@ def test_salvar_usuario(sessao):
 
 def test_listar_usuarios(sessao):
     usuarios = [
-        Usuario(nome='Bruno', email='brjatoba92@djangosolutions.com'), 
+        Usuario(nome='Bruno', email='brjatoba92@djangosolutions.com'),
         Usuario(nome='Isabella', email='bellaragao@gmail.com')
     ]
     for usuario in usuarios:

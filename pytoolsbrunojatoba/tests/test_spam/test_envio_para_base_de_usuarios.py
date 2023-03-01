@@ -1,21 +1,22 @@
-from pytoolsbrunojatoba.spam.enviador_de_email import Enviador
 from pytoolsbrunojatoba.spam.main import EnviadorDeSpam
 from pytoolsbrunojatoba.spam.modelos import Usuario
 import pytest
 from unittest.mock import Mock
 
+
 @pytest.mark.parametrize(
         'usuarios',
         [
             [
-                Usuario(nome='Bruno', email='brjatoba92@djangosolutions.com'), 
+                Usuario(nome='Bruno', email='brjatoba92@djangosolutions.com'),
                 Usuario(nome='Isabella', email='bellaragao@gmail.com')
             ],
             [
-                Usuario(nome='Bruno', email='brjatoba92@djangosolutions.com'), 
+                Usuario(nome='Bruno', email='brjatoba92@djangosolutions.com'),
             ]
         ]
 )
+
 
 def test_qtd_de_spam(sessao, usuarios):
     for usuario in usuarios:
